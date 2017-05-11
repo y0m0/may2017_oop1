@@ -14,6 +14,10 @@ RSpec.describe 'a calculator' do
   it 'subtracts one number from another' do
     expect(subtract(2, 1)).to eq 1
     expect(subtract(3, 1)).to eq 2
+    expect(subtract(0, 0)).to eq 0
+    expect(subtract(0, 1)).to eq -1
+    expect(subtract(-1, -1)).to eq 0
+    expect(subtract(0, Float::INFINITY)).to eq -Float::INFINITY
   end
 end
 
